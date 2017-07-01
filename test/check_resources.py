@@ -20,5 +20,11 @@ if not os.path.isfile(applications + 'odml.desktop'):
     print(applications + 'odml.desktop')
     exit(1)
 
+try:
+    import gi
+    from gi.repository import Gtk
+except:
+    exit(1)
+
 print("Success")
 exit(0)
