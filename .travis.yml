@@ -14,7 +14,9 @@ matrix:
 
 install:
   - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
-    # - pip install PyGObject
+  - apt-get install gobject-introspection
+  - pip install PyGObject
+
 
 script:
   - python setup.py install

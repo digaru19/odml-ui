@@ -14,12 +14,9 @@ print(img_files)
 for i in img_files:
     if not os.path.isfile(pixmaps + i):
         print("Not found :- %s" % pixmaps + i)
-        print("Fail 1")
         exit(1)
 
-
 if not os.path.isfile(applications + 'odml.desktop'):
-    print("Fail 2")
     print(applications + 'odml.desktop')
     exit(1)
 
