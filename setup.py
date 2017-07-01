@@ -6,7 +6,6 @@ import glob
 
 from distutils.core import setup
 
-kwargs = {}
 try:
     # only necessary for the windows build
     import py2exe
@@ -19,14 +18,14 @@ packages = [
     'odmlui.dnd',
     'odmlui.treemodel'
 ]
-kwargs['data_files'] = [('share/applications', ['odml.desktop']),
-                        ('share/pixmaps', glob.glob(os.path.join("images", "*")))
-                        ]
+
+data_files = [('share/applications', ['odml.desktop']),
+              ('share/pixmaps', glob.glob(os.path.join("images", "*")))
+              ]
 
 print("\n\nThe data files are :- \n")
-print(kwargs['data_files'])
+print(data_files)
 print('')
-kwargs['scripts'] = ['odml-gui']
 
 setup(name='odML-UI',
       version='1.3',
@@ -41,5 +40,6 @@ setup(name='odML-UI',
               'includes': 'cairo, pango, pangocairo, atk, gobject, gio, lxml, gzip, enum34',
           }
       },
-      **kwargs
+      scripts=['odml-gui'],
+      data_files=data_files
       )
