@@ -14,7 +14,8 @@ matrix:
 
 install:
   - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
-  - pip install PyGObject
+  # - pip install PyGObject
+  - sudo apt-get install python-gi
 
 
 script:
