@@ -17,14 +17,14 @@ for i in img_files:
         exit(1)
 
 if not os.path.isfile(applications + 'odml.desktop'):
-    print(applications + 'odml.desktop')
+    print("Not found :- %s" % (applications + 'odml.desktop'))
     exit(1)
 
 try:
     import gi
     from gi.repository import Gtk
-except:
+except Exception as e:
+    print(e)
     exit(1)
 
-print("Success")
 exit(0)
