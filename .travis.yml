@@ -7,6 +7,9 @@ env:
     global:
         - DISTUTILS_DEBUG=True
 
+notifications:
+      email: false
+
 matrix:
     include:
         # - python: "2.7"
@@ -17,6 +20,6 @@ install:
   - sudo bash install_deps.sh 
 
 script:
-  - sudo install pygobject.sh
+  - sudo bash pygobject.sh
   - python setup.py install
   - python test/check_resources.py
