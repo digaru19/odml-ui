@@ -14,9 +14,7 @@ matrix:
 
 install:
   - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
-  - sudo apt-get install libglib2.0-dev
-  - sudo apt install python-gi-dev python-gi-cairo python3-gi python3-gi-cairo gir1.2-gtk-3.0 libgtk-3-dev 
-  - sudo apt-get install python-gobject python-gobject-dev python-gobject-2-dev python-gobject-2
+  - sudo bash install_deps.sh 
 
 script:
   - python setup.py install

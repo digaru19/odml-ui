@@ -8,7 +8,6 @@ pixmaps = prefix + '/share/pixmaps/'
 applications = prefix + '/share/applications/'
 
 img_files = os.listdir(os.path.abspath("images") )
-print(img_files)
 
 # Check if image files exist in the system.
 for i in img_files:
