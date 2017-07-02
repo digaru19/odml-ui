@@ -2,6 +2,15 @@
 import os
 import sys
 
+try:
+    import gi
+    from gi.repository import Gtk
+except Exception as e:
+    print(e)
+    exit(1)
+
+exit(0)
+
 prefix = sys.prefix
 
 pixmaps = prefix + '/share/pixmaps/'
