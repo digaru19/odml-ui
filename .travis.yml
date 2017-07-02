@@ -19,8 +19,9 @@ install:
   - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
   - sudo bash install_deps.sh 
   - sudo bash pygobject.sh
-  - sudo python3 setup.py install
-  - python3 test/check_resources.py
+  - python3 -c "import gi; print(gi.__version__)"
+  #- sudo python3 setup.py install
+  # - python3 test/check_resources.py
 
 #script:
 #  - sudo bash pygobject.sh
