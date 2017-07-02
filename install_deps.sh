@@ -24,7 +24,7 @@ cd ..
 wget https://github.com/pygobject/pycairo/releases/download/v1.13.0/pycairo-1.13.0.tar.gz
 tar -xf pycairo-1.13.0.tar.gz
 cd pycairo-1.13.0
-sudo python setup.py install
+sudo python3 setup.py install
 cd ..
 
 # PyGObject (3.12.2)
