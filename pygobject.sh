@@ -12,11 +12,11 @@ sudo apt-get install libgirepository1.0-dev python-gi-dev python-gobject-dev pyt
 #cd ..
 
 # PyGObject (3.12.2)
-wget https://download.gnome.org/sources/pygobject/3.12/pygobject-3.12.2.tar.xz
-tar -xf pygobject-3.12.2.tar.xz
-cd pygobject-3.12.2
-./configure
-make
-sudo make install
-cd ..
+#wget https://download.gnome.org/sources/pygobject/3.12/pygobject-3.12.2.tar.xz
+#tar -xf pygobject-3.12.2.tar.xz
+#cd pygobject-3.12.2
+#./configure
+#make
+#sudo make install
+#cd ..
 
