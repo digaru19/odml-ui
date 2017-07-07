@@ -1,6 +1,7 @@
 #!/bin/bash
 
 python --version
+python3 --version
 sudo apt-get -qq update
 # sudo apt-get upgrade
 sudo apt-get install libffi-dev libglib2.0-0 libglib2.0-dev make
@@ -17,7 +18,10 @@ echo -e "\n\n #########################################"
 dpkg-query -L python-gi
 dpkg-query -L python3-gi
 
+python -c "import gi"
 python -c "from gi import pygtkcompat"
+python3 -c "import gi"
+python3 -c "from gi import pygtkcompat"
 
 echo -e "\n\n #########################################"
 echo -e "\n\t Success !!!"
