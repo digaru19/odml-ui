@@ -7,17 +7,21 @@ env:
     global:
         - DISTUTILS_DEBUG=True
 
+virtualenv:
+  system_site_packages: true
+
 notifications:
       email: false
 
 matrix:
     include:
-        # - python: "2.7"
-        - python: "3.5"
+        - python: "3.2"
 
-install:
-  - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
+before_install:
+  # - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
   - sudo bash install_deps.sh 
+  - "export DISPLAY=:99.0"
+  - sh -e /etc/init.d/xvfb start
   - python3 -c "import gi" 
   # - sudo bash pygobject.sh
   # - sudo python3 setup.py install
