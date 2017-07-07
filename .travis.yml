@@ -12,7 +12,10 @@ notifications:
 
 matrix:
     include:
-        - python: "3.2"
+        - python: "3.4"
+
+python:
+  - "3.4_with_system_site_packages"
 
 before_install:
   # - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
