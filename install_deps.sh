@@ -15,6 +15,6 @@ python3 -c "import gi"
 python3 -c "from gi import pygtkcompat"
 
 echo -e "\n\n #########################################"
-echo -e "\t Installed all dependencies successfully !!"
+echo -e " Installed all dependencies successfully !!"
 echo -e "\n #########################################"
 
