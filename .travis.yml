@@ -7,9 +7,6 @@ env:
     global:
         - DISTUTILS_DEBUG=True
 
-notifications:
-      email: false
-
 matrix:
     include:
         - python: "3.4"
