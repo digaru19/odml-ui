@@ -1,5 +1,5 @@
 sudo: required
-dist: xenial 
+dist: trusty 
 
 language: python
 
@@ -14,10 +14,8 @@ matrix:
     include:
         - python: "3.4"
 
-
 install:
-  - sudo bash install_deps.sh 
-  - python --version 
+  - sudo bash install_dependencies.sh 
   - python setup.py install
 
 script:
