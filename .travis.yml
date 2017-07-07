@@ -1,5 +1,5 @@
 sudo: required
-dist: trusty
+dist: xenial 
 
 language: python
 
@@ -13,12 +13,12 @@ notifications:
 matrix:
     include:
         # - python: "2.7"
-        - python: "3.4"
+        - python: "3.5"
 
 install:
   - export PYVER=${TRAVIS_PYTHON_VERSION:0:1}
   - sudo bash install_deps.sh 
-  - python3 -c "import gi;" 
+  - python3 -c "import gi" 
   # - sudo bash pygobject.sh
   # - sudo python3 setup.py install
   # - python3 test/check_resources.py
