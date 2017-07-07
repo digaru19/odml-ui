@@ -22,7 +22,7 @@ before_install:
   - "export DISPLAY=:99.0"
   - sh -e /etc/init.d/xvfb start
   - sudo bash install_deps.sh 
-  - python3 -c "import gi" 
+  - python -c "import gi" 
   # - sudo bash pygobject.sh
   # - sudo python3 setup.py install
   # - python3 test/check_resources.py
