@@ -4,8 +4,12 @@
 # hence the packages installed will be system-wide, and not 
 # specifically in the virtual environment.
 
+set -ev
+
 python --version
 python3 --version
+
+echo $TRAVIS_PYTHON_VERSION
 
 sudo apt-get -qq update
 sudo apt-get install libffi-dev libglib2.0-0 libglib2.0-dev
