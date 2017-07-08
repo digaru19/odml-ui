@@ -18,9 +18,8 @@ fi
 sudo apt-get -qq update
 sudo apt-get install libffi-dev libglib2.0-0 libglib2.0-dev
 sudo apt-get install gobject-introspection
-# sudo apt-get install python-gi python3-gi 
 sudo apt-get install ${packages}
-sudo apt-get install libgtk-3-dev gir1.2-glib-2.0 
+sudo apt-get install libgtk-3-dev # gir1.2-glib-2.0 
 
 if [ ${TRAVIS_PYTHON_VERSION%.*} -eq 3 ]
 then
