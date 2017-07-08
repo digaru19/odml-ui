@@ -7,11 +7,18 @@ env:
     global:
         - DISTUTILS_DEBUG=True
 
+os:
+    - linux
+    - osx
+
 matrix:
     include:
         - python: "3.4"
         - python: "2.7"
-
+    exclude:
+        - os: osx
+          python: "2.7"
+              
 install:
   - sudo bash install_dependencies.sh 
   - python setup.py install
