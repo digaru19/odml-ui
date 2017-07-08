@@ -29,15 +29,18 @@ then
     fi
     
 else
+    if [ ${TRAVIS_PYTHON_VERSION%.*} -eq 2 ]
+    then
+        exit 0;
+    fi
+    
     brew install libffi
     brew install glib
     brew install gobject-introspection --with-python3
     brew install pygobject3 --with-python3
 
 
-
 fi
-
 
 
 echo -e "\n\n #########################################"
