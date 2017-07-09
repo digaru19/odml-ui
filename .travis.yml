@@ -1,5 +1,4 @@
 sudo: required
-dist: trusty 
 
 language: python
 
@@ -8,7 +7,8 @@ env:
         - DISTUTILS_DEBUG=True
 
 os:
-    - linux
+    - linux      
+      dist: trusty 
     - osx
 
 matrix:

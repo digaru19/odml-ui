@@ -29,6 +29,7 @@ then
     fi
     
 else
+    exit 0;
     if [ ${TRAVIS_PYTHON_VERSION%.*} -eq 2 ]
     then
         exit 0;
@@ -38,7 +39,6 @@ else
     brew install glib
     brew install gobject-introspection --with-python3
     brew install pygobject3 --with-python3
-
 
 fi
 
