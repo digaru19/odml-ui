@@ -2,13 +2,15 @@
 
 # This script executes outside of the virtual environment,
 # hence the packages installed will be system-wide, and not 
-# specifically in the virtual environment.
+# specific to the virtual environment.
 
-set -ev
+set -e
 echo $TRAVIS_PYTHON_VERSION
 
+##### Linux Builds
 if [[ $TRAVIS_OS_NAME == 'linux' ]]
 then
+    
     
     if [ ${TRAVIS_PYTHON_VERSION%.*} -eq 3 ]
     then
@@ -17,7 +19,7 @@ then
         packages='python-gi'
     fi
     sudo apt-get -qq update
-    sudo apt-get install libffi-dev libglib2.0-0 libglib2.0-dev
+    sudo apt-get install libffi-dev libglib2.0-dev #libglib2.0-0 
     sudo apt-get install gobject-introspection libgtk-3-dev
     sudo apt-get install ${packages}
 
@@ -28,12 +30,8 @@ then
         python test/gi_imports.py
     fi
     
-else
-    exit 0;
-    if [ ${TRAVIS_PYTHON_VERSION%.*} -eq 2 ]
-    then
-        exit 0;
-    fi
+##### OS X Builds (Incomplete)
+else 
     
     brew install libffi
     brew install glib
@@ -41,7 +39,6 @@ else
     brew install pygobject3 --with-python3
 
 fi
-
 
 echo -e "\n\n #########################################"
 echo -e " Installed all dependencies successfully !!"
